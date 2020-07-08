@@ -135,11 +135,11 @@ while True:
                 print("도서 재고 수정")
                 ustok =input("수정하고자 하는 재고를 입력하세요. ")
 
-                while ustok.isdecimal() == False and stok < 0 :
+                while ustok.isdecimal() == False and ustok < 0 :
                     print("입력 형식이 틀렸습니다.")
-                    stok = input("재고를 입력하세요. >>")
+                    ustok = input("재고를 입력하세요. >>")
                     
-                book['stok'] = int(stok)
+                booklist[idx]['stok'] = int(ustok)
 
                 print("수정 결과")
                 print(booklist[idx]['num'],':',booklist[idx]['stok'])
