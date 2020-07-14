@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+homepage
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container-fluid">
+    <!-- Content here -->
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+      <html>
+<body>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">성명(한글)</th>
+        <th scope="col">성명(영어)</th>
+        <th scope="col">생년월일</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <form method="POST" action='/resume'>
+          <td>1</td>
+          <td> <input type="text" name = "username"/></td>
+          <td><input type="text" name="username_eng""/></td>
+          <td><input type="text" name="birth"/></td>
+        <input type="submit">
+        </form>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %} 

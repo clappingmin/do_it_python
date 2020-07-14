@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+이력서
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container-fluid">
+    <!-- Content here -->
+    <table class ="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">성명(한글)</th>
+                <th scope="col">성명(영어)</th>
+                <th scope="col">생년월일</th>
+            </tr>
+
+    
+        </thead>
+        <tbody border = "1" >                     
+                <tr>
+                    <th scope="row"></th>
+                    <th>{{result['username']}}</th>
+                    <th>{{result['username_eng']}}</th>
+                    <th>{{result['birth']}}</th>
+                </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">성명(한글)</th>
+                <th scope="col">성명(영어)</th>
+                <th scope="col">생년월일</th>
+            </tr>
+
+    
+        </thead>
+        </table>
+    <div class="jumbotron">
+        <form action="/fileupload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit">파일업로드<!--버튼위에 올라갈 글자--></button>
+        </form> 
+      </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %} 
